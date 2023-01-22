@@ -14,17 +14,17 @@
     <body>
         <h1>Arithmetic Calculator</h1>
         <form method="post" action="age">
-            First: <input type="text" name="first" value="${first}">
+            First: <input type="text" name="first">
             <br>
-            Last: <input type="text" name="last" value="${last}"> 
+            Last: <input type="text" name="last"> 
             <br>
-            <input type="submit" value="+"> 
-            <input type="submit" value="-"> 
-            <input type="submit" value="*"> 
-            <input type="submit" value="%"> 
+            <input type="submit" name="submit" value="+"> 
+            <input type="submit" name="submit" value="-"> 
+            <input type="submit" name="submit" value="*"> 
+            <input type="submit" name="submit" value="%"> 
             <br>
             <br>
-            Result: ---
+            Result: --- <p>${message}</p>
         </form>
             <a href="agecalculator.jsp">Age Calculator</a>
     </body>
