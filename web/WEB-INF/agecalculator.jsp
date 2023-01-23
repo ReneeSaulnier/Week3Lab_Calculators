@@ -20,6 +20,6 @@
             <br>
         </form>
         <p>${message}</p>
-            <a href="arithmeticcalculator.jsp>">Arithmetic Calculator</a>
+            <a href="/ArithemeticCalculator>">Arithmetic Calculator</a>
     </body>
 </html>

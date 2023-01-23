@@ -29,15 +29,16 @@ public class AgeCalculatorServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        // Setting the parameter for age to be used for errorchecking and displaying
         String age = request.getParameter("age");
         request.setAttribute("age", age);
-
-//        if(age == null || age.equals("")){
-//            request.setAttribute("message", "You must enter an age.");
-//            getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").forward(request, response);                
-//            return;
-//        }
-//        
+        
+        // Checking if the textbox is empty before displaying the age
+        if(age == null || age.equals("")){
+            request.setAttribute("message", "You must enter an age.");
+            getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").forward(request, response);                
+            return;
+        }
 
         // Displaying the age
         try{
@@ -48,19 +49,11 @@ public class AgeCalculatorServlet extends HttpServlet {
         }catch (NumberFormatException e){
             request.setAttribute("message", "You must enter a number.");
             getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").forward(request, response);                
-            return;
-        // Catching if there has been an empty input    
-        }catch (Exception e){
-            request.setAttribute("message", "You must enter an age.");
-            getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").forward(request, response);                
-            return;
+            return;  
         }
-
        getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").forward(request, response);
-
     }
 
-    
     @Override
     public String getServletInfo() {
         return "Short description";

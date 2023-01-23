@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Arithmetic Calculator</h1>
-        <form method="post" action="age">
+        <form method="post" action="ArithemeticCalculator">
             First: <input type="text" name="first">
             <br>
             Last: <input type="text" name="last"> 
@@ -24,8 +24,8 @@
             <input type="submit" name="submit" value="%"> 
             <br>
             <br>
-            Result: --- <p>${message}</p>
+            <div>Result: --- ${message}</div>
         </form>
-            <a href="agecalculator.jsp">Age Calculator</a>
+            <a href="ageCalculator">Age Calculator</a>
     </body>
 </html>
