@@ -35,16 +35,15 @@ public class AgeCalculatorServlet extends HttpServlet {
         
         // Checking if the textbox is empty before displaying the age
         if(age == null || age.equals("")){
-            request.setAttribute("message", "You must enter an age.");
+            request.setAttribute("message", "You must give your current age.");
             getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").forward(request, response);                
             return;
         }
 
         // Displaying the age
         try{
-            int ageAdded = Integer.parseInt(request.getParameter("age"));
-            int finalAge = ageAdded + 1;
-            request.setAttribute("message", "Your next birthday will be " + finalAge);
+            int ageAdded = Integer.parseInt(age);
+            request.setAttribute("message", "Your next birthday will be " + ((ageAdded) + 1));
         // Catching if there has been anything other than a number for input    
         }catch (NumberFormatException e){
             request.setAttribute("message", "You must enter a number.");

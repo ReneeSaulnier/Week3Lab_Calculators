@@ -16,10 +16,10 @@
         <form action="age" method="post">
             Enter your age: <input type="text" name="age"> 
             <br>
-            <input type="submit" value="submit">
+            <input type="submit" value="Age next birthday">
             <br>
         </form>
         <p>${message}</p>
-            <a href="/ArithemeticCalculator>">Arithmetic Calculator</a>
+            <a href="arithemetic">Arithmetic Calculator</a>
     </body>
 </html>
